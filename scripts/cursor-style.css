@@ -1,0 +1,30 @@
+body {
+    cursor: none; /* Hides the default mouse pointer */
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+/* Custom Cursor Style */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #00f2ff;  /* Glowing border color */
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.7);
+    background: rgba(0, 242, 255, 0.2); /* Semi-transparent center */
+    animation: pulse 1.5s infinite;
+}
+
+/* Glowing Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(0, 242, 255, 0.7), 0 0 30px rgba(0, 242, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 242, 255, 0.9), 0 0 50px rgba(0, 242, 255, 0.7);
+    }
+}

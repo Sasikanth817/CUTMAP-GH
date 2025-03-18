@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Booking Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="flex flex-col md:flex-row">
+
+        <!-- Sidebar -->
+        <div class="bg-gray-800 text-gray-100 w-full h-screen md:w-64 flex-shrink-0">
+            <div class="p-4">
+                <h1 class="text-2xl font-bold">Dashboard</h1>
+                <ul class="mt-4">
+                    <li class="py-2 hover:bg-gray-700"><a href="#" class="block px-4">gallery1 Bookings</a></li>
+                    <li class="py-2 hover:bg-gray-700"><a href="#" class="block px-4">Approved Bookings</a></li>
+                    <li class="py-2 hover:bg-gray-700"><a href="#" class="block px-4">Users</a></li>
+                    <li class="py-2 hover:bg-gray-700"><a href="#" class="block px-4">Add Deparments</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-full px-4 py-8">
+            <h2 class="text-2xl font-bold mb-4">Manage Hall Bookings</h2>
+            <div class="bg-white p-4 rounded-md shadow-md">
+                <!-- Bookings Table -->
+                <table class="w-full border">
+                    <thead>
+                        <tr class="border">
+                            <th class="py-2">Booking ID</th>
+                            <th class="py-2">User</th>
+                            <th class="py-2">Date</th>
+                            <th class="py-2">Status</th>
+                            <th class="py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Sample Data - Replace with dynamic data -->
+                        <tr class="border text-center">
+                            <td class="py-2 border">1</td>
+                            <td class="py-2 border">John Doe</td>
+                            <td class="py-2 border">2024-03-11</td>
+                            <td class="py-2 border">Pending</td>
+                            <td class="py-2 border">
+                                <button class="bg-green-500 text-white px-2 py-1 rounded-md">Approve</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded-md">Reject</button>
+                            </td>
+                        <tr class="border text-center">
+                            <td class="py-2 border">1</td>
+                            <td class="py-2 border">John Doe</td>
+                            <td class="py-2 border">2024-03-11</td>
+                            <td class="py-2 border">Pending</td>
+                            <td class="py-2 border">
+                                <button class="bg-green-500 text-white px-2 py-1 rounded-md">Approve</button>
+                                <button class="bg-red-500 text-white px-2 py-1 rounded-md">Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+
+    </div>
+
+</body>
+
+</html>

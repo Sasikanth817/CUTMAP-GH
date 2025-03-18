@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+   
+</head>
+<body>
+    <div class="back-nav flex items-center">
+        <i data-feather="chevron-left"></i>
+        <h3 class="back-title capitalize">payment method</h3>
+    </div>
+
+    <!-- categories -->
+    <div class="grid place-items-center">
+        <div class="test-bars flex items-center bg-gray-200 rounded-full relative list-none">
+            <div style="width: 66px;" class="mover absolute bg-black rounded-full h-full transition-all duration-500"></div>
+            <li class="bars cursor-default sm:cursor-pointer transition-all duration-500 relative px-6 py-2 capitalize rounded-full text-white">All</li>
+            <li class="bars cursor-default sm:cursor-pointer transition-all duration-500 relative px-4 py-2 capitalize rounded-full">featured</li>
+            <li class="bars cursor-default sm:cursor-pointer transition-all duration-500 relative px-4 py-2 capitalize rounded-full">kids</li>
+            <li class="bars cursor-default sm:cursor-pointer transition-all duration-500 relative px-6 py-2 capitalize rounded-full">adventure</li>
+        </div>
+    </div>
+</body>
+<script>
+    feather.replace();
+
+    const bars = document.querySelectorAll('.bars');
+    const mover = document.querySelector('.mover');
+    bars.forEach((bar,index)=>{
+        bar.addEventListener('click',(e)=>{
+            // css styling
+            bars.forEach(e=>e.classList.remove('text-white'));
+            bar.classList.add('text-white');
+            // slider black ball logic  (It is not perfect make it perfect in future)
+            mover.style.left = `${index*70}px`;
+            mover.style.width = `${bar.offsetWidth}px`;
+          console.log(bar.offsetWidth);
+        })
+    })
+  </script>
+
+</html>
